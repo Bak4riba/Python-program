@@ -6,7 +6,7 @@ from datetime import datetime
 data_e_hora_atuais = datetime.now()
 hora = data_e_hora_atuais.strftime("%H")
 
-##
+##VALIDANDO QUAL HORÁRIO ESTAMOS E QUAL PLAYLIST DEVERÁ SER TOCADA
 if int(hora) > 7  and int(hora) < 12:
     pyautogui.press("win")
     pyautogui.write('spotify')
