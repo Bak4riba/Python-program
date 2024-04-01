@@ -6,42 +6,43 @@ from datetime import datetime
 data_e_hora_atuais = datetime.now()
 hora = data_e_hora_atuais.strftime("%H")
 
-##VALIDANDO QUAL HORÁRIO ESTAMOS E QUAL PLAYLIST DEVERÁ SER TOCADA
-if int(hora) > 7  and int(hora) < 12:
-    pyautogui.press("win")
-    pyautogui.write('spotify')
-    pyautogui.press('enter')
-    time.sleep(3)
-    pyautogui.moveTo(98,150,0.5)
-    pyautogui.click(button='left')
-    time.sleep(2)
-    pyautogui.write('Dom Bosco - Manhã')
-    pyautogui.moveTo(622,416,0.5)
-    time.sleep(3)
-    pyautogui.click(button='left')
+#VALIDANDO QUAL HORÁRIO ESTAMOS E QUAL PLAYLIST DEVERÁ SER TOCADA
+if int(hora) >= 7  and int(hora) <= 12:
+    #ABRINDO SPOTIFY
+    pyautogui.moveTo(37,58)
+    pyautogui.leftClick()
+    time.sleep(15)
+    #SELECIONANDO PLAYLIST
+    pyautogui.moveTo(113,511)
+    pyautogui.leftClick()
+    time.sleep(5)
+    #CLICANDO NO PLAY
+    pyautogui.moveTo(210,442)
+    pyautogui.leftClick()
+
 elif int(hora)> 12 and int(hora) < 17:
+    #ABRINDO SPOTIFY
+    pyautogui.moveTo(37,58)
+    pyautogui.leftClick()
+    time.sleep(15)
+    #SELECIONANDO PLAYLIST
+    pyautogui.moveTo(109,438)
+    pyautogui.leftClick()
+    time.sleep(5)
+    #CLICANDO NO PLAY
+    pyautogui.moveTo(210,442)
+    pyautogui.leftClick()
 
-    pyautogui.press("win")
-    pyautogui.write('spotify')
-    pyautogui.press('enter')
-    time.sleep(3)
-    pyautogui.moveTo(98,150,0.5)
-    pyautogui.click(button='left')
-    time.sleep(2)
-    pyautogui.write('Tarde - Dom Bosco')
-    pyautogui.moveTo(622,416,0.5)
-    time.sleep(3)
-    pyautogui.click(button='left')
+
 else:
-    pyautogui.press("win")
-    pyautogui.write('spotify')
-    pyautogui.press('enter')
-    time.sleep(3)
-    pyautogui.moveTo(98,150,0.5)
-    pyautogui.click(button='left')
-    time.sleep(2)
-    pyautogui.write('UNIFATEB')
-    pyautogui.moveTo(622,416,0.5)
-    time.sleep(3)
-    pyautogui.click(button='left')
-
+    #ABRINDO SPOTIFY
+    pyautogui.moveTo(37,58)
+    pyautogui.leftClick()
+    time.sleep(15)
+    #ESCOLHENDO PLAYLIST
+    pyautogui.moveTo(108,381)
+    pyautogui.leftClick()
+    time.sleep(5)
+    #CLICANDO NO PLAY
+    pyautogui.moveTo(210,442)
+    pyautogui.leftClick()
